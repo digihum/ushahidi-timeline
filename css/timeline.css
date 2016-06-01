@@ -7,19 +7,14 @@
 	display: inline-block;
 }
 
-.verticaltext{
-	/* Safari */
-	-webkit-transform: rotate(-90deg);
+.timelineunit{
+	vertical-align: top; display:inline-block; width:50px; height:300px;
+}
 
-	/* Firefox */
-	-moz-transform: rotate(-90deg);
+.timelinehigher{
+	float:left; position:relative; height: 250px; width:50px;
+}
 
-	/* IE */
-	-ms-transform: rotate(-90deg);
-
-	/* Opera */
-	-o-transform: rotate(-90deg);
-
-	/* Internet Explorer */
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}	
+.timelinelower{
+	float:left; position:relative; height: 50px; width:50px; font-size:10px; text-align:center;
+}

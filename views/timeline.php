@@ -17,14 +17,14 @@
 			$height = $dates[$date_start] * $scale;
 			$top = 250 - $height;
 		
-			$output .= '<div style="vertical-align: top; display:inline-block; width:50px; height:300px;">';
-			$output .= '<div style="float:left; position:relative; height: 250px; width:50px"><a href="' . url::site() . '/reports/index?from=' . $date_start . '-01&to=' . $date_start . '-31"><div style="position:relative; top:' . $top . 'px; width:50px; height:' . $height . 'px; background:#000"></div></a></div>';
-			$output .= '<div style="float:left; position:relative; height: 50px; width:50px; font-size:10px; text-align:center">' . $time . '</div>';
+			$output .= '<div class="timelineunit">';
+			$output .= '<div class="timelinehigher"><a href="' . url::site() . '/reports/index?from=' . $date_start . '-01&to=' . $date_start . '-31"><div style="position:relative; top:' . $top . 'px; width:50px; height:' . $height . 'px; background:#000"></div></a></div>';
+			$output .= '<div class="timelinelower">' . $time . '</div>';
 			$output .= '</div>';
 		}else{
-			$output .= '<div style="vertical-align: top; display:inline-block; width:50px; height:300px;">';
-			$output .= '<div style="float:left; position:relative; height: 250px; width:50px"></div>';
-			$output .= '<div style="float:left; position:relative; height: 50px; width:50px; font-size:10px; text-align:center">' . $time . '</div>';
+			$output .= '<div class="timelineunit">';
+			$output .= '<div class="timelinehigher"></div>';
+			$output .= '<div class="timelinelower">' . $time . '</div>';
 			$output .= '</div>';
 		}
 		$parts = explode("-", $date_start);
@@ -43,23 +43,9 @@
 		}
 		$width += 50;
 	}while ($date_start != $current);
-	if(isset($dates[$current])){
-		
-		$height = $dates[$current] * $scale;
-		$top = 250 - $height;
-		
-		$output .= '<div style="vertical-align: top; display:inline-block; width:50px; height:300px;">';
-		$output .= '<div style="float:left; position:relative; height: 250px; width:50px"><a href="' . url::site() . '/reports/index?from=' . $date_start . '-01&to=' . $date_start . '-31"><div style="position:relative; top:' . $top . 'px; width:50px; height:' . $height . 'px; background:#000"></div></a></div>';
-		$output .= '<div style="float:left; position:relative; height: 50px; width:50px">' . $date_start . '</div>';
-		$output .= '</div>';
-	}else{
-		$output .= '<div style="vertical-align: top; display:inline-block; width:50px; height:300px;">';
-		$output .= '<div style="float:left; position:relative; height: 250px; width:50px"></div>';
-		$output .= '<div style="float:left; position:relative; height: 50px; width:50px">' . $date_start . '</div>';
-		$output .= '</div>';
-	}
+	
 	?>
-	<div class="timelineholder" style="width:<?PHP echo $width + 50; ?>px; height:350px">
+	<div class="timelineholder" style="width:<?PHP echo $width; ?>px; height:350px">
 		<?PHP
 			echo $output;
 		?>
