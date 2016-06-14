@@ -8,7 +8,7 @@
 	$date = $date_start;
 	$output = "";
 	$width = 0;
-	echo $interval . "<br />";
+	
 	foreach($dates as $date => $total)
 	{
 		$parts = explode("-",$date);
