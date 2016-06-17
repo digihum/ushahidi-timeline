@@ -3,7 +3,7 @@
 		<td>
 			<h4 class="fix">Timeline Interval</h4>
 			<div class="row">
-				<?php print form::dropdown('timeline_interval', array("Monthly","Bi-Monthly","Tri-Monthly","Four Monthly","Half Yearly","Yearly"), $form['timeline_interval'], ' class="text title_2"'); ?>
+				<?php print form::dropdown('timeline_interval', array("Monthly","Bi-Monthly","Tri-Monthly","Four Monthly","Half Yearly","Yearly","Seasons"), $form['timeline_interval'], ' class="text title_2"'); ?>
 			</div>
 		</td>
 	</tr>						

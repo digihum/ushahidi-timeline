@@ -6,7 +6,6 @@ requires: 2.1
 tested up to: 2.1
 author: Pgogy Webstuff
 author website: http://www.pgogywebstuff.com
-css: timeline.css
 
 == Description ==
 Shows Time Line
